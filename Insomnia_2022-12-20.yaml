@@ -1,0 +1,848 @@
+_type: export
+__export_format: 4
+__export_date: 2022-12-20T01:29:41.242Z
+__export_source: insomnia.desktop.app:v2022.6.0
+resources:
+  - _id: req_55aa114f25e944cab228bd5a4c98f109
+    parentId: fld_5eea9d9970ae4e7da9e71cdcbffe01a1
+    modified: 1661770568240
+    created: 1661770537100
+    url: http://127.0.0.1:8000/schedule/
+    name: New Request
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1661770537100
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_5eea9d9970ae4e7da9e71cdcbffe01a1
+    parentId: wrk_49c6597a4bdd449cab43ea5dc0a27ec2
+    modified: 1661770534797
+    created: 1661770534797
+    name: Schedule table
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1661770534798
+    _type: request_group
+  - _id: wrk_49c6597a4bdd449cab43ea5dc0a27ec2
+    parentId: null
+    modified: 1654171221976
+    created: 1654171221976
+    name: New Document
+    description: ""
+    scope: design
+    _type: workspace
+  - _id: req_f8af2c6c20ae406dabf93c34e812015a
+    parentId: fld_81bf9ef8f51c44458e95b77b4a109c1d
+    modified: 1661476366409
+    created: 1661393820558
+    url: http://127.0.0.1:8000/board/
+    name: Get posting list
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_13a2f859647a45e9ab4a77314cdeb72d
+        name: page
+        value: "4"
+        description: ""
+        disabled: false
+    headers: []
+    authentication: {}
+    metaSortKey: -1661393820558
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_81bf9ef8f51c44458e95b77b4a109c1d
+    parentId: wrk_49c6597a4bdd449cab43ea5dc0a27ec2
+    modified: 1661393817453
+    created: 1661393817453
+    name: Posting
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1661393817453
+    _type: request_group
+  - _id: req_1ab835f89a6c4265a6c88bba63245f20
+    parentId: fld_81bf9ef8f51c44458e95b77b4a109c1d
+    modified: 1661473190442
+    created: 1661397650381
+    url: http://127.0.0.1:8000/board/3/
+    name: Get posting
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1661393820533
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_faa97fb7241648a49c3999006d03ee61
+    parentId: fld_81bf9ef8f51c44458e95b77b4a109c1d
+    modified: 1670469063861
+    created: 1661397089138
+    url: http://127.0.0.1:8000/board/
+    name: Post posting
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"user_id" : "tansu",
+        	"title" : "영락없는 바보는 오늘도 재밌는 짓을 한다.",
+        	"content" : "이유없는 메시지.",
+        	"category" : 3
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_8ddb4a45708e473c9c88ad232d0a4b29
+    authentication: {}
+    metaSortKey: -1661393820508
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_1de6dbff7ec642a6a730ba9d0b1103fc
+    parentId: fld_81bf9ef8f51c44458e95b77b4a109c1d
+    modified: 1670469067589
+    created: 1661409974763
+    url: http://127.0.0.1:8000/board/4/
+    name: Edit posting
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"t" : "고양이,개,달팽이"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_856d0a187569464db06085e823dc53b0
+    authentication: {}
+    metaSortKey: -1661393820458
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_4f35c29d85ae42cc95fc0ce434ae91b7
+    parentId: fld_81bf9ef8f51c44458e95b77b4a109c1d
+    modified: 1671499740839
+    created: 1661473237906
+    url: http://127.0.0.1:8000/board/3/
+    name: Delete posting
+    description: ""
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"content" : "고양이,개,달팽이"
+        }
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1661151161920.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e57efaf3e52d49fcbc3f07f8dfb16b7c
+    parentId: fld_81bf9ef8f51c44458e95b77b4a109c1d
+    modified: 1661772324390
+    created: 1661483777747
+    url: http://127.0.0.1:8000/notice/
+    name: Get notice only
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_2c42783c4cd346b7a7a1773c056374b9
+        name: gradecode
+        value: "1"
+        description: ""
+      - id: pair_dd6f69c60d9449159ad9abe608264962
+        name: page
+        value: "4"
+        description: ""
+    headers: []
+    authentication: {}
+    metaSortKey: -1661151161870.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e9b6fdcb8923434e9e57fc8a7bf3f0b9
+    parentId: fld_556723fe66ff4fef91e3ffa429e7d483
+    modified: 1661412491495
+    created: 1661156642580
+    url: http://127.0.0.1:8000/mealtable/
+    name: Get all meal table
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_8bcd61f4377445c0b7dad56e3d72ad2e
+        name: timecode
+        value: "20220825"
+        description: ""
+      - id: pair_fd7b5d8eb2564c02bf1584ac5d67474f
+        name: mealcode
+        value: "3"
+        description: ""
+        disabled: true
+    headers: []
+    authentication: {}
+    metaSortKey: -1660908503383
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_556723fe66ff4fef91e3ffa429e7d483
+    parentId: wrk_49c6597a4bdd449cab43ea5dc0a27ec2
+    modified: 1660976701735
+    created: 1660908499353
+    name: meal table
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1660908499353
+    _type: request_group
+  - _id: req_15016be4cf8e4a339c0d82a637d1bc91
+    parentId: fld_556723fe66ff4fef91e3ffa429e7d483
+    modified: 1661483761983
+    created: 1660908503333
+    url: http://127.0.0.1:8000/mealtable/
+    name: Get all meal table
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_dc887798d5f04d608227a4e6f0e37263
+        name: timecode
+        value: "202208"
+        description: ""
+    headers: []
+    authentication: {}
+    metaSortKey: -1660908503333
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_45d284e5d7e04e2eb89e6c0cd898595a
+    parentId: fld_556723fe66ff4fef91e3ffa429e7d483
+    modified: 1670469054397
+    created: 1660977088602
+    url: http://127.0.0.1:8000/mealtable/update/
+    name: Refrash meal table
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"query" : "위코드"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_b243588a0ef24c0fa07ecbf66054b3cc
+    authentication: {}
+    metaSortKey: -1660898747336.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_53b3f5ad74c04fb8917aa21079ce723c
+    parentId: fld_556723fe66ff4fef91e3ffa429e7d483
+    modified: 1670469053532
+    created: 1661060992448
+    url: https://open.neis.go.kr/hub/mealServiceDietInfo?ATPT_OFCDC_SC_CODE=R10&SD_SCHUL_CODE=8750205&MLSV_YMD=202208&KEY=4f5ebbeb3aaf43409dd048e871679003
+    name: school
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"query" : "위코드"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_b243588a0ef24c0fa07ecbf66054b3cc
+    authentication: {}
+    metaSortKey: -1660893869338.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_907378a4bfc14d3e9e41daa5b151a4dc
+    parentId: fld_556723fe66ff4fef91e3ffa429e7d483
+    modified: 1661156135789
+    created: 1661147290328
+    url: https://open.neis.go.kr/hub/mealServiceDietInfo/?Type=json&ATPT_OFCDC_SC_CODE=R10&SD_SCHUL_CODE=8750205&KEY=4f5ebbeb3aaf43409dd048e871679003&MLSV_YMD=202208
+    name: schoolf
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"query" : "위코드"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_b243588a0ef24c0fa07ecbf66054b3cc
+    authentication: {}
+    metaSortKey: -1660891430339.125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_cbbf14b9086b487a8d6147b67237b81e
+    parentId: fld_34b5419cbfca4503a334f23edf3f167c
+    modified: 1670468915835
+    created: 1654171222019
+    url: http://127.0.0.1:8000/user/tansu/
+    name: Read user info
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"username": "admin",
+        	"password": "password"
+        }
+    parameters: []
+    headers:
+      - id: pair_b3e461d44b2540968c69d9266e972ab8
+        name: Authorization
+        value: JWT
+          eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjEyOTgxNDIsImlhdCI6MTY2MTI5Nzg0Mn0.4QoqBTv6oEForFXqbq-lCqqNY6IDtE8IdYfylrnen5U
+        description: ""
+    authentication: {}
+    metaSortKey: -1660888991340
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_34b5419cbfca4503a334f23edf3f167c
+    parentId: wrk_49c6597a4bdd449cab43ea5dc0a27ec2
+    modified: 1660888988266
+    created: 1660888988266
+    name: Account
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1660888988266
+    _type: request_group
+  - _id: req_739c1ce3162c472cb51b3145313b3745
+    parentId: fld_34b5419cbfca4503a334f23edf3f167c
+    modified: 1670469001080
+    created: 1660716354625
+    url: http://127.0.0.1:8000/login/
+    name: Login
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"user_id" : "tansu",
+        	"password" : "hh789123"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_c1c99ae566f34d51a4a9feec37e7f9e0
+    authentication: {}
+    metaSortKey: -1660888991290
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_14361e5a0dbf4c869ab70fab22b1fbd9
+    parentId: fld_34b5419cbfca4503a334f23edf3f167c
+    modified: 1670469018404
+    created: 1660888991240
+    url: http://127.0.0.1:8000/find_pw/
+    name: Find password
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"user_id" : "hhj",
+        	"email" : "hrlaxogus@naver.com"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_6027b66c322a4eea8d7ce337ab8fbb14
+    authentication: {}
+    metaSortKey: -1660888991240
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_da111e85903242b8aeb69910478caf12
+    parentId: fld_34b5419cbfca4503a334f23edf3f167c
+    modified: 1670468908522
+    created: 1661255458887
+    url: http://127.0.0.1:8000/user/
+    name: Create user
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"user_id" : "2yungtak",
+        	"password" : "password",
+        	"name" : "김기산",
+        	"email" : "yang@naver.com",
+        	"grade_number" : 3,
+        	"class_number" : 4,
+        	"student_number" : 7
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_465b030a275c42689bfd9a45586ed19e
+    authentication: {}
+    metaSortKey: -1660888991215
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_09456356d94a4fb9b0bb38aab0a88d85
+    parentId: fld_34b5419cbfca4503a334f23edf3f167c
+    modified: 1670469036472
+    created: 1660903114024
+    url: http://127.0.0.1:8000/user/tansu/
+    name: Edit user
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"first_name" : "김",
+        	"last_name" : "수빈"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_48b53596bfa641a3be27524274199e18
+      - id: pair_9364f54626604dee9d4a875a29b0cea2
+        name: Authorization
+        value: JWT
+          eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMSwiZXhwIjoxNjYxMjczNzIyLCJpYXQiOjE2NjEyNzM0MjJ9.OTK0RxbHgYjevPqJX8BsNSgN2KMa1wx3KNZHwckJyro
+        description: ""
+    authentication: {}
+    metaSortKey: -1660888991190
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_259c37feb2ac425f9b68f46bda5e38b7
+    parentId: fld_34b5419cbfca4503a334f23edf3f167c
+    modified: 1670469038927
+    created: 1660904062750
+    url: http://127.0.0.1:8000/user/hhj/
+    name: Delete user
+    description: ""
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"password" : "password"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_48b53596bfa641a3be27524274199e18
+      - id: pair_9364f54626604dee9d4a875a29b0cea2
+        name: Authorization
+        value: JWT
+          eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjA5MDU1MzYsImlhdCI6MTY2MDkwNTIzNn0.UEUShZXdZrVyhLw9xgG5dmd2vb76eZW3cG-GAlSlsy8
+        description: ""
+    authentication: {}
+    metaSortKey: -1660881582161.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_8923a0cd8be04010baead0c4958fabf1
+    parentId: fld_34b5419cbfca4503a334f23edf3f167c
+    modified: 1670469040130
+    created: 1661479395148
+    url: http://127.0.0.1:8000/user/tansu/change/
+    name: Change password
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"password" : "password",
+        	"new_pw" : "123",
+        	"pw_check" : "123"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_48b53596bfa641a3be27524274199e18
+    authentication: {}
+    metaSortKey: -1660881582111.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_5e14787e9add454faef0520299b56133
+    parentId: fld_46069747effa4ec6af19ef2057f36c9a
+    modified: 1661756480300
+    created: 1660719399965
+    url: http://127.0.0.1:8000/email_pass/tansu/
+    name: order verification
+    description: ""
+    method: GET
+    body:
+      mimeType: multipart/form-data
+      params: []
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: multipart/form-data
+        id: pair_1000ece62e4c4dc8b295eb327598fcf4
+    authentication: {}
+    metaSortKey: -1660874173133
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_46069747effa4ec6af19ef2057f36c9a
+    parentId: wrk_49c6597a4bdd449cab43ea5dc0a27ec2
+    modified: 1660874164039
+    created: 1660874164039
+    name: email verification
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1660874164039
+    _type: request_group
+  - _id: req_fd16a28c0ba24e6b96ce5f528ad7f925
+    parentId: fld_46069747effa4ec6af19ef2057f36c9a
+    modified: 1661768296801
+    created: 1660874135497
+    url: http://127.0.0.1:8000/email_pass/tansu/
+    name: check verification code
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"code" : 637516
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_14de2db8ebc94742b2fa38c4487d94ef
+    authentication: {}
+    metaSortKey: -1660874173108
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_eb715be05d2646cda80af18f2361ea3b
+    parentId: fld_46069747effa4ec6af19ef2057f36c9a
+    modified: 1661759592802
+    created: 1661742949786
+    url: http://127.0.0.1:8000/email_pass/tansu/
+    name: change pass verification
+    description: ""
+    method: GET
+    body:
+      mimeType: multipart/form-data
+      params: []
+    parameters:
+      - id: pair_927733fa668748e79411d5506ef30ffa
+        name: usage
+        value: "2"
+        description: ""
+    headers:
+      - name: Content-Type
+        value: multipart/form-data
+        id: pair_1000ece62e4c4dc8b295eb327598fcf4
+    authentication: {}
+    metaSortKey: -1660874173058
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_b808d12c36ec410fadaad8130a0ad83e
+    parentId: fld_46069747effa4ec6af19ef2057f36c9a
+    modified: 1661767583548
+    created: 1661751488569
+    url: http://127.0.0.1:8000/email_pass/tansu/
+    name: check verification code
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"code" : 637516,
+        	"usage" : 2
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_14de2db8ebc94742b2fa38c4487d94ef
+    authentication: {}
+    metaSortKey: -1660874173008
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_80fff31ded514e67ae5524f542361af5
+    parentId: fld_46069747effa4ec6af19ef2057f36c9a
+    modified: 1661765783467
+    created: 1661759755997
+    url: http://127.0.0.1:8000/email_pass/tansu/change/
+    name: change forgot password
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"new_pw" : "hh789123",
+        	"pw_check" : "hh789123"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_14de2db8ebc94742b2fa38c4487d94ef
+    authentication: {}
+    metaSortKey: -1660874172958
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_bd26a4d459d4bca651e793ae325d6f4f940056a2
+    parentId: wrk_49c6597a4bdd449cab43ea5dc0a27ec2
+    modified: 1660716342747
+    created: 1654171222003
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: {}
+    color: null
+    isPrivate: false
+    metaSortKey: 1654171222003
+    _type: environment
+  - _id: jar_bd26a4d459d4bca651e793ae325d6f4f940056a2
+    parentId: wrk_49c6597a4bdd449cab43ea5dc0a27ec2
+    modified: 1661431149717
+    created: 1654171222011
+    name: Default Jar
+    cookies:
+      - key: csrftoken
+        value: RO6hfCSGIeeZ7sqaWnsvYAwHD7NQpg0eZ17Yb84wruydKYRVUWPZsQ9GEAt2yS3M
+        expires: 2023-08-24T12:39:09.000Z
+        maxAge: 31449600
+        domain: 127.0.0.1
+        path: /
+        extensions:
+          - SameSite=Lax
+        hostOnly: true
+        creation: 2022-06-04T03:51:46.157Z
+        lastAccessed: 2022-08-25T12:39:09.717Z
+        id: "12211296277618833"
+      - key: WMONID
+        value: QQuxdK-wFfN
+        expires: 2023-08-21T05:52:21.000Z
+        domain: stu.sen.go.kr
+        path: /
+        hostOnly: true
+        creation: 2022-08-21T05:52:21.376Z
+        lastAccessed: 2022-08-21T05:52:21.376Z
+        id: "25786354286077406"
+      - key: JSESSIONID
+        value: 6hfvDgg1YcvmQfZtuhrpZ1VWWw3F61wf8bMGxg0gLalaqjB9bJXFjpGTttNUL1Tj.sen-pacwas1_servlet_stuwas
+        domain: stu.sen.go.kr
+        path: /
+        hostOnly: true
+        creation: 2022-08-21T05:52:21.377Z
+        lastAccessed: 2022-08-21T05:52:21.377Z
+        id: "3759491730007276"
+      - key: WMONID
+        value: g98KxZHx00i
+        expires: 2023-08-21T06:00:32.000Z
+        domain: stu.gbe.kr
+        path: /
+        hostOnly: true
+        creation: 2022-08-21T06:00:32.301Z
+        lastAccessed: 2022-08-21T06:00:32.301Z
+        id: "4624107276866989"
+      - key: JSESSIONID
+        value: aPKswwGifCkUnw8z1iv0WNh1kbOUA4Ic8ZEHaevxY3PPkoMMbK1O3Xmy6CaSoCaw.gbe-pacwas2_servlet_stuwas
+        domain: stu.gbe.kr
+        path: /
+        hostOnly: true
+        creation: 2022-08-21T06:00:32.301Z
+        lastAccessed: 2022-08-21T06:00:32.301Z
+        id: "46040170058098173"
+      - key: WMONID
+        value: -Wyz2YTG5cE
+        expires: 2023-08-21T06:10:09.000Z
+        domain: open.neis.go.kr
+        path: /
+        hostOnly: true
+        creation: 2022-08-21T06:10:09.313Z
+        lastAccessed: 2022-08-21T06:10:09.313Z
+        id: "19643356742216"
+    _type: cookie_jar
+  - _id: spc_02950838fcf74eeaa7c7ebf088e1bf0b
+    parentId: wrk_49c6597a4bdd449cab43ea5dc0a27ec2
+    modified: 1671499712084
+    created: 1654171221993
+    fileName: Django URLS
+    contents: ""
+    contentType: yaml
+    _type: api_spec
+  - _id: uts_d7966390a6ad4a9f8d6212b047720a16
+    parentId: wrk_49c6597a4bdd449cab43ea5dc0a27ec2
+    modified: 1654171222022
+    created: 1654171222022
+    name: Example Test Suite
+    _type: unit_test_suite
